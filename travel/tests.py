@@ -1,5 +1,5 @@
 from django.test import TestCase
-from django_restframework.tests import TestCase as APITestCase
+from rest_framework.test import APITestCase
 from .models import Planet, City, Location, Spaceship
 
 # Create your tests here.
@@ -39,3 +39,8 @@ class TestTravelModels(TestCase):
         loc.capacity = 0
         self.assertFalse(spaceship.travel(loc))
         self.assertEqual(spaceship.location.city.name, "Melbourne")
+
+
+class TestAPIViews(APITestCase):
+    def setUp(self) -> None:
+        return super().setUp()
