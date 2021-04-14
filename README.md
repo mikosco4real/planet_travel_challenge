@@ -100,4 +100,4 @@ Attributes = id, name, model, location, status
 
 it accepts only post_request. and requires you to provide a destination as an input.
 
-eg: post(url='http://127.0.0.1/spaceship/<id>/travel', data={'destination': 2}) *The destination is the ID of the Location you want to go*
+eg: post(url='http://127.0.0.1/spaceship/1/travel', data={'destination': 2}) *The destination is the ID of the Location you want to go*
