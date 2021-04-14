@@ -14,7 +14,6 @@ class CitySerializer(ModelSerializer):
     class Meta:
         model = City
         fields = '__all__'
-        depth = 1
 
 
 class LocationSerializer(ModelSerializer):
@@ -22,7 +21,6 @@ class LocationSerializer(ModelSerializer):
     class Meta:
         model = Location
         fields = '__all__'
-        depth = 2
 
 
 class SpaceshipSerializer(ModelSerializer):
@@ -30,4 +28,3 @@ class SpaceshipSerializer(ModelSerializer):
     class Meta:
         model = Spaceship
         fields = '__all__'
-        depth = 3

@@ -79,13 +79,13 @@ class Spaceship(models.Model):
     
     def travel(self, destination):
         """
-            Travel implemented in model level to conform with DRY.
+            Travel algorithm/Logic implemented in model level to conform with DRY.
         """
         travel_completed = False
         if destination.capacity > 0:
             old_location = self.location
-            old_location.capacity -= 1
-            destination.capacity += 1
+            old_location.capacity += 1
+            destination.capacity -= 1
             self.location = destination
             old_location.save()
             destination.save()

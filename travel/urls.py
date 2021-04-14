@@ -1,5 +1,5 @@
 from django.urls import path, include
-from rest_framework import routers, urlpatterns
+from rest_framework import routers
 from .views import PlanetViewset, CityViewset, LocationViewset, SpaceshipViewset
 
 router = routers.DefaultRouter(trailing_slash=False)
