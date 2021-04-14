@@ -39,12 +39,9 @@ class SpaceshipViewset(ModelViewSet):
         if request.POST:
             destination = request.POST["destination"]
         
-        if request.GET:
-            destination = request.GET["destination"]
-        
             try:
                 destination = Location.objects.get(id=destination)
-            except Exception as e:
+            except Exception:
                 destination = None
                 response_status = status.HTTP_406_NOT_ACCEPTABLE
                 return Response(data="The requested destination does not exist", status=response_status)
